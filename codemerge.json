@@ -36,6 +36,7 @@
     "**/*.tsx",
     "**/*.jsx",
     "**/*.json",
+    "**/*.html",
     "**/*.md",
     "Dockerfile"
   ]
