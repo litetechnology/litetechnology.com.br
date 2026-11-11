@@ -1,4 +1,14 @@
 node_modules
 dist
 .git
+.gitignore
+.claude
+.vscode
+.idea
+docs
 *.log
+*.local
+.env
+.env.*
+Dockerfile
+.dockerignore
