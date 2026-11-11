@@ -1,36 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicons/lite-technology-any.svg" sizes="any" type="image/svg+xml">
-    <link rel="icon" href="/favicons/lite-technology-16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="/favicons/lite-technology-32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/favicons/lite-technology-48.png" sizes="48x48" type="image/png">
-    <link rel="icon" href="/favicons/lite-technology-96.png" sizes="96x96" type="image/png">
-    <link rel="icon" href="/favicons/lite-technology-144.png" sizes="144x144" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lite Technology</title>
-    <meta name="description" content="A empresa líder em soluções tecnológicas, proporcionando inovação e crescimento para negócios online. Experiência, excelência e resultados garantidos.">
-    <meta name="keywords" content="lite, litetechnology, litetech, lite-technology, agencia-lite, agencia, desenvolvimento, desenvolvimento-de-sites, identidade visual, designer-grafico, programação-de-sites">
+    <title>Lite Technology · Desenvolvimento, social media e marketing</title>
+    <meta name="description" content="Desenvolvimento de software, social media e marketing digital sob medida. A Lite Technology une tecnologia, design e criatividade para o seu negócio crescer online." />
+    <meta name="keywords" content="lite technology, litetechnology, agência, desenvolvimento de sites, landing page, sistemas web, automação, social media, marketing digital, SEO" />
+    <meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)" />
 
-    <!-- facebook -->
-    <meta property="og:title" content="Lite Technology">
-    <meta property="og:description" content="A empresa líder em soluções tecnológicas, proporcionando inovação e crescimento para negócios online. Experiência, excelência e resultados garantidos.">
-    <meta property="og:image" content="/images/background.png">
+    <link rel="icon" href="/favicons/lite-technology-any.svg" sizes="any" type="image/svg+xml" />
+    <link rel="icon" href="/favicons/lite-technology-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicons/lite-technology-96.png" sizes="96x96" type="image/png" />
+    <link rel="apple-touch-icon" href="/favicons/lite-technology-144.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://litetechnology.com.br" />
+    <meta property="og:title" content="Lite Technology" />
+    <meta property="og:description" content="Desenvolvimento, design e criatividade para o seu negócio crescer." />
+    <meta property="og:image" content="/images/background.png" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="Lite Technology" />
-    <meta property="twitter:url" content="https://litetechnology.space" />
-    <meta property="twitter:title" content="LIte Technology" />
-    <meta property="twitter:description" content="A empresa líder em soluções tecnológicas, proporcionando inovação e crescimento para negócios online. Experiência, excelência e resultados garantidos." />
-    <meta property="twitter:image" content="/images/background.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lite Technology" />
+    <meta name="twitter:description" content="Desenvolvimento, design e criatividade para o seu negócio crescer." />
+    <meta name="twitter:image" content="/images/background.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;700;900&family=Karla:wght@200;400;700;800&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Aplica o tema salvo antes da primeira pintura para evitar o flash de tema errado. -->
+    <script>
+      (function () {
+        try {
+          var raw = localStorage.getItem("litetechnology_theme");
+          var theme = raw;
+          if (raw && raw.charAt(0) === "{") theme = JSON.parse(raw).title;
+          if (theme !== "light" && theme !== "dark") {
+            theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          }
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/index.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
